@@ -1,0 +1,26 @@
+{
+    "name": "weather-cli",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Canoist/weather-cli.git"
+    },
+    "keywords": [
+        "weather",
+        "cli"
+    ],
+    "author": "Leo (Canoist) Lichkun",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Canoist/weather-cli/issues"
+    },
+    "homepage": "https://github.com/Canoist/weather-cli#readme",
+    "dependencies": {
+        "axios": "^1.2.2"
+    }
+}
