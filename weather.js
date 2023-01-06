@@ -2,7 +2,7 @@
 
 import { getArgs } from "./helpers/args.js";
 import { printError, printHelp, printSuccess } from "./services/log.service.js";
-import { saveKeyValue } from "./services/storage.service.js";
+import { saveKeyValue, TOKEN_DICTIONARY } from "./services/storage.service.js";
 
 const saveToken = async (token) => {
     if (!token.length) {
@@ -10,7 +10,7 @@ const saveToken = async (token) => {
         return;
     }
     try {
-        saveKeyValue("token", token);
+        saveKeyValue(TOKEN_DICTIONARY.token, token);
         printSuccess("Токен сохранён");
     } catch (error) {
         printError(error.message);
