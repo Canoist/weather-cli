@@ -29,6 +29,7 @@ const saveKeyValue = async (key, value) => {
 };
 
 const getKeyValue = async (key) => {
+    let data = {};
     if (await isExist(filePath)) {
         const file = await readFile(filePath);
         data = JSON.parse(file);
