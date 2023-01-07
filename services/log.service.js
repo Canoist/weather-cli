@@ -19,12 +19,12 @@ export const printHelp = () => {
 };
 
 export const printWeather = (data, icon) => {
-    console.log(dedent`${chalk.bgYellow.bold(" Weather ")} Погода в городе ${
-        data.name
-    }
+    console.log(dedent`${chalk.bgYellow.bold.black(
+        " Weather "
+    )} Погода в городе ${data.name}
     ${icon} ${data.weather[0].description}
     Температура: ${data.main.temp} °C (Ощущается как ${data.main.feels_like} °C)
-    Влажность: ${data.main.humidity}
+    Влажность: ${data.main.humidity}%
     Ветер: ${data.wind.speed} м/с
     `);
 };

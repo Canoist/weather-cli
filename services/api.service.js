@@ -1,4 +1,5 @@
 import axios from "axios";
+import chalk from "chalk";
 import { getKeyValue, TOKEN_DICTIONARY } from "./storage.service.js";
 
 export const getWeather = async () => {
@@ -27,8 +28,32 @@ export const getWeather = async () => {
 };
 
 export const getIcon = async (icon) => {
-    const { data } = await axios.get(
-        "https://openweathermap.org/img/wn/" + icon + ".png"
-    );
-    return data;
+    switch (icon.slice(0, -1)) {
+        case "01":
+            return chalk.yellow("☀");
+
+        case "02":
+            return "⛅";
+
+        case "03":
+            return chalk.white("☁");
+
+        case "04":
+            return chalk.white(chalk.black("☁") + "☁");
+
+        case "09":
+            return chalk.white("🌧");
+
+        case "10":
+            return "☔";
+
+        case "11":
+            return chalk.white("⛈");
+
+        case "13":
+            return chalk.white("❄");
+
+        case "50":
+            return chalk.bgGray.white(" F O G ");
+    }
 };
