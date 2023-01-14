@@ -1,13 +1,14 @@
 {
-    "name": "weather-cli",
+    "name": "weather-cli-by-canoist",
     "version": "1.0.0",
-    "description": "",
+    "description": "CLI for getting current weather",
     "main": "weather.js",
     "bin": {
         "weather": "weather.js"
     },
     "type": "module",
     "scripts": {
+        "start": "node weather.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
