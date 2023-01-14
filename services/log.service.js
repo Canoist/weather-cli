@@ -23,8 +23,8 @@ export const printWeather = (data, icon) => {
         " Weather "
     )} Погода в городе ${data.name}
     ${icon} ${data.weather[0].description}
-    Температура: ${data.main.temp} °C (Ощущается как ${data.main.feels_like} °C)
+    Температура: ${data.main.temp}°C (Ощущается как ${data.main.feels_like}°C)
     Влажность: ${data.main.humidity}%
-    Ветер: ${data.wind.speed} м/с
+    Ветер: ${data.wind.speed}м/с
     `);
 };
